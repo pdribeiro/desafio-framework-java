@@ -13,10 +13,16 @@ public class Elementos {
 	private By emailcadastrado = By.xpath("//span[contains(text(),'Cadastro realizado com sucesso')]");
 	private By entrar = By.xpath("//button");
 	private By logout = By.xpath("//*[text()=\"Logout\"]");
+	private By produtos = By.xpath("//ul//li[contains(.,\"Listar Produtos\")]");
 
 
 
 
+
+
+	public By getProdutos() {
+		return produtos;
+	}
 
 	public By getLogout() {
 		return logout;

@@ -10,16 +10,26 @@ Feature: Framework
   
   Scenario: CN01 Realizar cadastro
  	  When Clicar em cadastre-se
-    When Preencher o campo nome "Pedro2"
-    When Preencher o campo email "Pedro2@teste.com.br"
+    When Preencher o campo nome "Framework"
+    When Preencher o campo email "framework1@teste.com.br"
     When Preencher o campo senha "1234" 
     And Clicar no botao cadastrar
-    Then Cadastro realizado com sucesso
+    Then Cadastro realizado com sucesso "Login"
     
 
   Scenario: CN02 Logar no portal
-    When Preencher o campo email "Pedro2@teste.com.br"  
+    When Preencher o campo email "framework1@teste.com.br"  
     When Preencher o campo senha "1234" 
     And Clicar no botao entrar
     Then logar no portal
     Then Validar login "Logout"
+    
+  Scenario: CN03 Logar no portal e listar produtos
+    When Preencher o campo email "framework1@teste.com.br"  
+    When Preencher o campo senha "1234" 
+    And Clicar no botao entrar
+    Then logar no portal
+    Then listar produtos "Produtos"
+    
+    
+    

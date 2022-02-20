@@ -52,8 +52,10 @@ public class Steps {
 
 	}
 
-	@Then("Cadastro realizado com sucesso")
-	public void cadastro_realizado_com_sucesso() {
+	@Then("Cadastro realizado com sucesso {string}")
+	public void cadastro_realizado_com_sucesso(String string) {
+		metodos.Sleep();
+		metodos.screnShot(string);
 		metodos.fecharNavegador();
 
 	}
@@ -72,9 +74,19 @@ public class Steps {
 	@Then("Validar login {string}")
 	public void validar_login(String textoEsperado) {
 	metodos.validadeTexto(textoEsperado, el.getLogout());
+	metodos.screnShot(textoEsperado);
 	metodos.fecharNavegador();
 
 	}
+	
+	@Then("listar produtos {string}")
+	public void listar_produtos(String string) {
+	metodos.clicar(el.getProdutos());
+	metodos.Sleep();
+	metodos.screnShot(string);
+	metodos.fecharNavegador();
+	}
+
 
 
 }

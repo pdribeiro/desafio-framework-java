@@ -67,7 +67,7 @@ public class Metodos {
 	
 	public void Sleep() {
 		try {
-			Thread.sleep(1000);
+			Thread.sleep(2000);
 		} catch (Exception e) {
 			System.err.println("------- erro de Timeout -------- " + e.getMessage());
 			System.err.println("---------- Causa do erro ----------" + e.getCause());
